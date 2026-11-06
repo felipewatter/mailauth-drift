@@ -1,0 +1,17 @@
+name: Bug report
+description: Report a reproducible parser or policy regression issue
+labels: [bug]
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+      description: Do not include production credentials, secret keys, or private records.
+    validations:
+      required: true
+  - type: textarea
+    id: reproducer
+    attributes:
+      label: Minimal sanitized input and command
+    validations:
+      required: true

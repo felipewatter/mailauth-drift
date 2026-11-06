@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "domains": {
+    "example.com": {
+      "txt": {
+        "example.com": ["v=spf1 include:_spf.example.com ~all"],
+        "_spf.example.com": ["v=spf1 +all"],
+        "_dmarc.example.com": ["v=DMARC1; p=none; sp=none; adkim=r; aspf=r; t=y; rua=mailto:reports@example.com"],
+        "_mta-sts.example.com": ["v=STSv1; id=20261106-test"]
+      },
+      "mta_sts_policy": {
+        "version": "STSv1",
+        "mode": "testing",
+        "max_age": 3600,
+        "mx": ["mx1.example.com", "mx2.example.com"]
+      }
+    }
+  }
+}
